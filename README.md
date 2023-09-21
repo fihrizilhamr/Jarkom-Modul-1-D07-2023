@@ -13,13 +13,13 @@ Anggota Kelompok D07:
 
 ### Soal 1
 User melakukan berbagai aktivitas dengan menggunakan protokol FTP. Salah satunya adalah mengunggah suatu file.
-#### a)
+##### Poin a)
 Berapakah sequence number (raw) pada packet yang menunjukkan aktivitas tersebut? 
-#### b)
+##### Poin b)
 Berapakah acknowledge number (raw) pada packet yang menunjukkan aktivitas tersebut? 
-#### c)
+##### Poin c)
 Berapakah sequence number (raw) pada packet yang menunjukkan response dari aktivitas tersebut?
-#### d)
+##### Poin d)
 Berapakah acknowledge number (raw) pada packet yang menunjukkan response dari aktivitas tersebut?
 
 ### Soal 2
@@ -27,9 +27,9 @@ Sebutkan web server yang digunakan pada portal praktikum Jaringan Komputer!
 
 ### Soal 3
 Dapin sedang belajar analisis jaringan. Bantulah Dapin untuk mengerjakan soal berikut:
-#### a)
+##### Poin a)
 Berapa banyak paket yang tercapture dengan IP source maupun destination address adalah 239.255.255.250 dengan port 3702?
-#### b)
+##### Poin b)
 Protokol layer transport apa yang digunakan?
 
 ### Soal 4
@@ -37,11 +37,11 @@ Berapa nilai checksum yang didapat dari header pada paket nomor 130?
 
 ### Soal 5
 Elshe menemukan suatu file packet capture yang menarik. Bantulah Elshe untuk menganalisis file packet capture tersebut.
-#### a)
+##### Poin a)
 Berapa banyak packet yang berhasil di capture dari file pcap tersebut?
-#### b)
+##### Poin b)
 Port berapakah pada server yang digunakan untuk service SMTP?
-#### c)
+##### Poin c)
 Dari semua alamat IP yang tercapture, IP berapakah yang merupakan public IP?
 
 ### Soal 6
