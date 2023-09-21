@@ -58,3 +58,9 @@ Berikan kueri filter sehingga wireshark hanya mengambil paket yang berasal dari 
 
 ### Soal 10
 Sebutkan kredensial yang benar ketika user mencoba login menggunakan Telnet
+
+## Kendala
+Berikut adalah kendala yang dihadapi ketika mencoba menyelesaikan tugas praktikum Jaringan Komputer:
+1. Ketidakstabilan jaringan yang menyebabkan keterlambatan dalam proses pengerjaan.
+2. Batasan waktu pengerjaan yang cukup singkat.
+3. Keterbatasan waktu untuk mengembangkan _proof of concept_ yang komprehensif.
