@@ -13,14 +13,10 @@ Anggota Kelompok D07:
 
 ### Soal 1
 User melakukan berbagai aktivitas dengan menggunakan protokol FTP. Salah satunya adalah mengunggah suatu file.
-##### Poin a)
-Berapakah sequence number (raw) pada packet yang menunjukkan aktivitas tersebut? 
-##### Poin b)
-Berapakah acknowledge number (raw) pada packet yang menunjukkan aktivitas tersebut? 
-##### Poin c)
-Berapakah sequence number (raw) pada packet yang menunjukkan response dari aktivitas tersebut?
-##### Poin d)
-Berapakah acknowledge number (raw) pada packet yang menunjukkan response dari aktivitas tersebut?
+a. Berapakah sequence number (raw) pada packet yang menunjukkan aktivitas tersebut? 
+b. Berapakah acknowledge number (raw) pada packet yang menunjukkan aktivitas tersebut? 
+c. Berapakah sequence number (raw) pada packet yang menunjukkan response dari aktivitas tersebut?
+d. Berapakah acknowledge number (raw) pada packet yang menunjukkan response dari aktivitas tersebut?
 
 
 ### Soal 2
