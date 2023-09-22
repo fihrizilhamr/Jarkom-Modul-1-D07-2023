@@ -58,11 +58,34 @@ Lalu, periksa nilai checksum pada bagian User Datagram Protocol (UDP). Setelah i
 ### Soal 5
 Elshe menemukan suatu file packet capture yang menarik. Bantulah Elshe untuk menganalisis file packet capture tersebut.
 ##### Poin a)
-Berapa banyak packet yang berhasil di capture dari file pcap tersebut?
+Berapa banyak packet yang berhasil di capture dari file pcap tersebut? `60`
 ##### Poin b)
-Port berapakah pada server yang digunakan untuk service SMTP?
+Port berapakah pada server yang digunakan untuk service SMTP? `25`
 ##### Poin c)
-Dari semua alamat IP yang tercapture, IP berapakah yang merupakan public IP?
+Dari semua alamat IP yang tercapture, IP berapakah yang merupakan public IP? `74.53.140.153`
+
+###### Jawaban
+Untuk menyelesaikan soal di atas, kita perlu mendapatkan `host` dan `port` yang tepat untuk melakukan netcat. Untuk itu, kita dapat menggunakan perintah berikut:
+```
+smtp.auth.password
+```
+Untuk melihat dan menganalisis paket yang ter_capture_, kita bisa `Follow TCP Stream` terhadapt paket yang telah ditemukan. Setelah itu, kitab isa menemukan string yang telah diencode menggunakan Base64, yaitu `NWltcGxlUGFzNXdvcmQ=`. Setelah kita decode, kitab isa mendapatkan passwordnya, yaitu `5implePas5word`. Kemudian, kita bisa buka text file menggunakan password tersebut. Dengan itu kita bisa mendapatkan `host` serta `port` yang dibutuhkan, yaitu `nc 10.21.78.111 11111`.
+Untuk mendapatkan berapa banyak paket yang berhasil ter_capture_, kita dapat melihat pada bagian _Displayed Packets_. Setelah itu, kita bisa mendapatkan nilai **60**.
+Untuk port pada server yang digunakan untuk service SMTP, kitab isa menjawab **25**. Karena Port 25 adalah port standar yang digunakan untuk mengirim email melalui protokol SMTP.
+Untuk mendapatkan IP yang merupakan _public_ IP, kita bisa menghilangkan _private_ IP terlebih dahulu. Karena rentang alamat _public_ IP mencakup setiap nomor yang tidak dicadangkan untuk rentang _private_ IP. Ada tiga kelas rentang _private_ IP, yaitu: `Kelas A: 10.x.x.x`, `Kelas B: 172.16.x.x`, dan `Kelas C: 192.168.x.x`. Untuk itu, kita bisa menggunakan perintah berikut:
+```
+(ip.dst != 192.168.0.0/16 && ip.dst != 172.16.0.0/12 && ip.dst != 10.0.0.0/8)
+```
+Kemudian kita bisa melihat _Destination Address_ yang merupakan _public_ IP, yaitu **74.53.140.153**.
+
+> ![No 5 Part 1](https://github.com/fihrizilhamr/Jarkom-Modul-1-D07-2023/assets/116176265/ff7c02e6-a319-43a8-9bf2-9b60e402079f)
+
+> ![No 5 Part 2](https://github.com/fihrizilhamr/Jarkom-Modul-1-D07-2023/assets/116176265/8aa104c6-c06b-446a-bf9c-ce0291952374)
+
+> ![No 5 Part 3](https://github.com/fihrizilhamr/Jarkom-Modul-1-D07-2023/assets/116176265/7179886f-f865-4c53-a869-096fef68c538)
+
+> ![No 5 Part 4](https://github.com/fihrizilhamr/Jarkom-Modul-1-D07-2023/assets/116176265/c02ffa60-46a8-49a4-8583-99151f00c132)
+
 
 ### Soal 6
 Seorang anak bernama Udin Berteman dengan SlameT yang merupakan seorang penggemar film detektif. sebagai teman yang baik, Ia selalu mengajak slamet untuk bermain valoranT bersama. suatu malam, terjadi sebuah hal yang tak terdUga. ketika udin mereka membuka game tersebut, laptop udin menunjukkan sebuah field text dan Sebuah kode Invalid bertuliskan "server SOURCE ADDRESS 7812 is invalid". ketika ditelusuri di google, hasil pencarian hanya menampilkan a1 e5 u21. jiwa detektif slamet pun bergejolak. bantulah udin dan slamet untuk menemukan solusi kode error tersebut.
