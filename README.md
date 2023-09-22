@@ -28,30 +28,32 @@ Sebutkan web server yang digunakan pada portal praktikum Jaringan Komputer!
 ### Soal 3
 Dapin sedang belajar analisis jaringan. Bantulah Dapin untuk mengerjakan soal berikut:
 ##### Poin a)
-Berapa banyak paket yang tercapture dengan IP source maupun destination address adalah 239.255.255.250 dengan port 3702?
+Berapa banyak paket yang tercapture dengan IP source maupun destination address adalah 239.255.255.250 dengan port 3702? `21`
 ##### Poin b)
-Protokol layer transport apa yang digunakan? 
-###### Pembahasan dan Jawaban
-Untuk menyelesaikan soal di atas, kita perlu memanggil paket yang sesuai dengan kriteria soal. Untuk memanggil paket yang ter_capture_ dengan IP _source_ maupun _destination_ “239.255.255.250” dengan port “3702”, kita dapat menggunakan perintah berikut:
+Protokol layer transport apa yang digunakan? `UDP`
+
+###### Jawaban
+Untuk menyelesaikan soal di atas, kita perlu memanggil paket yang sesuai dengan kriteria soal. Untuk memanggil paket yang ter_capture_ dengan IP _source_ maupun _destination_ `239.255.255.250` dengan port `3702`, kita dapat menggunakan perintah berikut:
 ```
 (ip.src == 239.255.255.250 && udp.port == 3702) || (ip.dst == 239.255.255.250 && udp.port == 3702)
 ```
-Periksa jumlah paket yang ter_capture_ pada bagian _Displayed Packets_. Setelah itu, kita bisa mendapatkan nilai *21*. Untuk mendapatkan nama protokol layer transport digunakan, periksa keterangan setelah melakukan _display filter_ menggunakan perintah sebelumnya. Setelah itu, kita bisa mendapatkan jawaban *UDP*
+Periksa jumlah paket yang ter_capture_ pada bagian _Displayed Packets_. Setelah itu, kita bisa mendapatkan nilai **21**. Untuk mendapatkan nama protokol layer transport yang digunakan, periksa keterangan paket. Setelah itu, kita bisa mendapatkan jawaban **UDP**.
 
-![No 3](https://github.com/fihrizilhamr/Jarkom-Modul-1-D07-2023/assets/116176265/10ad3c22-e045-45a2-9eeb-fae3cbd69f3f)
+> ![No 3](https://github.com/fihrizilhamr/Jarkom-Modul-1-D07-2023/assets/116176265/10ad3c22-e045-45a2-9eeb-fae3cbd69f3f)
 
 
 
 ### Soal 4
-Berapa nilai checksum yang didapat dari header pada paket nomor 130?
-###### Pembahasan dan Jawaban
+Berapa nilai checksum yang didapat dari header pada paket nomor 130? `0x18e5`
+
+###### Jawaban
 Untuk menyelesaikan soal di atas, panggil paket nomor 130 menggunakan Wireshark. Untuk memanggilnya, kita dapat menggunakan perintah berikut:
 ```
 frame.number == 130
 ```
-Lalu, periksa nilai checksum pada bagian User Datagram Protocol (UDP). Setelah itu, kita bisa mendapatkan nilai *0x18e5*
+Lalu, periksa nilai checksum pada bagian User Datagram Protocol (UDP). Setelah itu, kita bisa mendapatkan nilai **0x18e5**
 
-![No 4](https://github.com/fihrizilhamr/Jarkom-Modul-1-D07-2023/assets/116176265/e3687ce8-269b-497c-a317-4e90d09f899b)
+> ![No 4](https://github.com/fihrizilhamr/Jarkom-Modul-1-D07-2023/assets/116176265/e3687ce8-269b-497c-a317-4e90d09f899b)
 
 ### Soal 5
 Elshe menemukan suatu file packet capture yang menarik. Bantulah Elshe untuk menganalisis file packet capture tersebut.
