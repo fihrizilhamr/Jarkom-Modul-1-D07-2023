@@ -203,6 +203,7 @@ Untuk menyelesaikan soal di atas, kita perlu perhatikan kembali dengan cermat so
 - `server SOURCE ADDRESS 7812 is invalid`
 - `a1 e5 u21` 
 - Huruf inisial beberapa kata yang dapat dirangkai menjadi `SUBSTITUSI`
+
 Dengan menggunakan data diatas, kita dapat tarik beberapa kesimpulan, yaitu:
 - _`Source Address`_ pada paket `7812` merupakan hal yang penting
 - Kita perlu mendecode sesuatu dengan menggunakan `a1z26`
