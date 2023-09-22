@@ -65,14 +65,25 @@ Port berapakah pada server yang digunakan untuk service SMTP? `25`
 Dari semua alamat IP yang tercapture, IP berapakah yang merupakan public IP? `74.53.140.153`
 
 ###### Jawaban
-Untuk menyelesaikan soal di atas, kita perlu mendapatkan `host` dan `port` yang tepat untuk melakukan netcat. Untuk itu, kita dapat menggunakan perintah berikut:
+Untuk menyelesaikan soal di atas, kita perlu mendapatkan `host` dan `port` yang tepat untuk melakukan `netcat`. Untuk itu, kita dapat menggunakan perintah berikut:
 ```
 smtp.auth.password
 ```
-Untuk melihat dan menganalisis paket yang ter_capture_, kita bisa `Follow TCP Stream` terhadapt paket yang telah ditemukan. Setelah itu, kitab isa menemukan string yang telah diencode menggunakan Base64, yaitu `NWltcGxlUGFzNXdvcmQ=`. Setelah kita decode, kitab isa mendapatkan passwordnya, yaitu `5implePas5word`. Kemudian, kita bisa buka text file menggunakan password tersebut. Dengan itu kita bisa mendapatkan `host` serta `port` yang dibutuhkan, yaitu `nc 10.21.78.111 11111`.
-Untuk mendapatkan berapa banyak paket yang berhasil ter_capture_, kita dapat melihat pada bagian _Displayed Packets_. Setelah itu, kita bisa mendapatkan nilai **60**.
-Untuk port pada server yang digunakan untuk service SMTP, kitab isa menjawab **25**. Karena Port 25 adalah port standar yang digunakan untuk mengirim email melalui protokol SMTP.
-Untuk mendapatkan IP yang merupakan _public_ IP, kita bisa menghilangkan _private_ IP terlebih dahulu. Karena rentang alamat _public_ IP mencakup setiap nomor yang tidak dicadangkan untuk rentang _private_ IP. Ada tiga kelas rentang _private_ IP, yaitu: `Kelas A: 10.x.x.x`, `Kelas B: 172.16.x.x`, dan `Kelas C: 192.168.x.x`. Untuk itu, kita bisa menggunakan perintah berikut:
+Untuk melihat dan menganalisis paket yang telah ditangkap, kita dapat menggunakan fungsi `Follow TCP Stream` terhadap paket yang telah ditemukan. Setelah itu, kita dapat menemukan string yang telah diencode menggunakan Base64, yaitu `NWltcGxlUGFzNXdvcmQ=`. Setelah kita mendecode string tersebut, kita akan mendapatkan passwordnya, yaitu `5implePas5word`.
+
+Selanjutnya, kita dapat membuka file teks menggunakan password tersebut. Dengan cara ini, kita dapat menemukan host dan port yang diperlukan, yaitu `nc 10.21.78.111 11111`.
+
+Untuk mengetahui berapa banyak paket yang berhasil ditangkap (captured), kita dapat melihat pada bagian `Displayed Packets`. Setelah diperiksa, kita dapat mengetahui bahwa jumlah paket yang berhasil ditangkap adalah sebanyak **60**.
+
+Adapun untuk mengetahui port yang digunakan oleh server untuk layanan SMTP, jawabannya adalah port **25**. Port **25** adalah port standar yang digunakan untuk mengirim email melalui protokol SMTP.
+
+Terakhir, untuk mendapatkan alamat IP publik, kita perlu menghilangkan alamat IP pribadi terlebih dahulu. Rentang alamat IP publik mencakup semua nomor IP yang tidak dicadangkan untuk rentang alamat IP pribadi. Terdapat tiga kelas rentang alamat IP pribadi, yaitu:
+
+- Kelas A: 10.x.x.x
+- Kelas B: 172.16.x.x
+- Kelas C: 192.168.x.x
+
+Untuk menghilangkan alamat IP pribadi, kita dapat menggunakan perintah berikut:
 ```
 (ip.dst != 192.168.0.0/16 && ip.dst != 172.16.0.0/12 && ip.dst != 10.0.0.0/8)
 ```
