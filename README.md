@@ -22,7 +22,7 @@ Untuk mendapatkan sequence number (raw) pada packet yang menunjukkan aktivitas t
 ftp.request.command == "STOR"
 ```
 Lalu sistem akan menampilkan _source address_, yaitu 192.168.254.129. Sistem juga akan menampilkan _destination address_, yaitu 10.21.78.111. Kemudian menunjukkan sequence number beserta acknowledge number pada soal poin b.
-<img width="431" alt="image" src="https://github.com/fihrizilhamr/Jarkom-Modul-1-D07-2023/assets/105486369/961463e4-5d39-4061-8e34-f98f8e5bd6f4">
+<img width="931" alt="image" src="https://github.com/fihrizilhamr/Jarkom-Modul-1-D07-2023/assets/105486369/961463e4-5d39-4061-8e34-f98f8e5bd6f4">
 
 
 b. Berapakah acknowledge number (raw) pada packet yang menunjukkan aktivitas tersebut? `1044861039`
@@ -35,12 +35,12 @@ Untuk mendapatkan sequence number (raw) pada packet yang menunjukkan response da
 ftp.response.arg contains "c75"
 ```
 Lalu sistem akan menampilkan _source address_, yaitu 192.168.254.129. Sistem juga akan menampilkan _destination address_, yaitu 10.21.78.111. Kemudian menunjukkan sequence number beserta acknowledge number pada soal poin d.
-<img width="434" alt="image" src="https://github.com/fihrizilhamr/Jarkom-Modul-1-D07-2023/assets/105486369/ca68d467-4235-478c-b020-ff521f3ac6cb">
+<img width="1034" alt="image" src="https://github.com/fihrizilhamr/Jarkom-Modul-1-D07-2023/assets/105486369/ca68d467-4235-478c-b020-ff521f3ac6cb">
 
 
 d. Berapakah acknowledge number (raw) pada packet yang menunjukkan response dari aktivitas tersebut? `258040696`
 
-<img width="420" alt="image" src="https://github.com/fihrizilhamr/Jarkom-Modul-1-D07-2023/assets/105486369/fafb2f7a-e2ec-45de-8404-890a052e73ee">
+<img width="1020" alt="image" src="https://github.com/fihrizilhamr/Jarkom-Modul-1-D07-2023/assets/105486369/fafb2f7a-e2ec-45de-8404-890a052e73ee">
 
 
 
@@ -55,7 +55,7 @@ http contains "www"
 
 Lalu sistem akan menampilkan 3 _source address_ yang sama, yaitu 10.21.78.111. Sistem juga akan menampilkan 3 _destination address_ yang sama, yaitu 192.168.254.129. Masing-masing address adalah milik VPN ITS. Kemudian sistem akan menunjukkan web server dengan tampilan sebagai berikut.
 
-<img width="565" alt="image" src="https://github.com/fihrizilhamr/Jarkom-Modul-1-D07-2023/assets/105486369/d5600df9-8a74-410b-a5d2-f683492c7634">
+<img width="1065" alt="image" src="https://github.com/fihrizilhamr/Jarkom-Modul-1-D07-2023/assets/105486369/d5600df9-8a74-410b-a5d2-f683492c7634">
 
 
 
@@ -138,7 +138,18 @@ Kemudian kita bisa melihat _Destination Address_ yang merupakan _public_ IP, yai
 
 
 ### Soal 7
-Berapa jumlah packet yang menuju IP 184.87.193.88?
+Berapa jumlah packet yang menuju IP 184.87.193.88? `6`
+##### Jawaban
+Untuk mengetahui jumlah packet yang menuju ke IP 184.87.193.88 adalah dengan memasukkan filter sebagai berikut.
+
+```
+ip.dst == 184.87.193.88
+```
+Lalu sistem akan menampilkan jumlah packetnya, yaitu 6.
+
+<img width="1215" alt="image" src="https://github.com/fihrizilhamr/Jarkom-Modul-1-D07-2023/assets/105486369/65f09bb6-4e09-46ad-aacc-e429e301de83">
+<img width="1213" alt="image" src="https://github.com/fihrizilhamr/Jarkom-Modul-1-D07-2023/assets/105486369/30b152a6-c488-4c83-a5ce-29bfae21aab8">
+
 
 
 ### Soal 8
@@ -168,7 +179,20 @@ Setelah itu, kita bisa mendapatkan kueri filter yang sesuai, yaitu **ip.src == 1
 
 
 ### Soal 10
-Sebutkan kredensial yang benar ketika user mencoba login menggunakan Telnet
+Sebutkan kredensial yang benar ketika user mencoba login menggunakan Telnet! `dhafin:kesayangank0k0`
+##### Jawaban
+Untuk mengetaui kredensial ketika _user_ mencoba login menggunakan Telnet adalah dengan memasukkan filter sebagai berikut:
+
+```
+telnet && frame contains "Login"
+```
+
+Lalu sistem akan menampilkan dengan format **[userame][password]** dan didapatkan jawabannya adalah **dhafin:kesayangank0k0**
+
+<img width="1024" alt="image" src="https://github.com/fihrizilhamr/Jarkom-Modul-1-D07-2023/assets/105486369/3fff3316-8ed9-4a2c-8e56-2b09cd4aa8c6">
+<img width="1028" alt="image" src="https://github.com/fihrizilhamr/Jarkom-Modul-1-D07-2023/assets/105486369/120c6eff-b364-41eb-845d-5421af934ee3">
+
+
 
 ## Revisi
 ### Soal 6
