@@ -34,6 +34,14 @@ Protokol layer transport apa yang digunakan?
 
 ### Soal 4
 Berapa nilai checksum yang didapat dari header pada paket nomor 130?
+###### Jawaban
+Untuk menyelesaikan soal di atas, dapat ikuti langkah berikut:
+Pertama, panggil paket nomor 130 menggunakan Wireshark. Untuk memanggilnya, kita dapat menggunakan perintah berikut:
+```
+wireshark frame.number == 130
+```
+Kedua, periksa nilai checksum pada bagian User Datagram Protocol (UDP). Setelah itu, kita bisa mendapatkan Nilai *0x18e5*
+![No 4](https://github.com/fihrizilhamr/Jarkom-Modul-1-D07-2023/assets/116176265/e3687ce8-269b-497c-a317-4e90d09f899b)
 
 ### Soal 5
 Elshe menemukan suatu file packet capture yang menarik. Bantulah Elshe untuk menganalisis file packet capture tersebut.
