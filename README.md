@@ -96,6 +96,8 @@ Kemudian kita bisa melihat _Destination Address_ yang merupakan _public_ IP, yai
 > ![No 5 Part 3](https://github.com/fihrizilhamr/Jarkom-Modul-1-D07-2023/assets/116176265/7179886f-f865-4c53-a869-096fef68c538)
 
 > ![No 5 Part 4](https://github.com/fihrizilhamr/Jarkom-Modul-1-D07-2023/assets/116176265/c02ffa60-46a8-49a4-8583-99151f00c132)
+ 
+> ![No 5 Part 5](https://github.com/fihrizilhamr/Jarkom-Modul-1-D07-2023/assets/116176265/75eb931c-a196-430d-91ec-5dd14b7c3262)
 
 
 ### Soal 6
