@@ -14,17 +14,49 @@ Anggota Kelompok D07:
 ### Soal 1
 User melakukan berbagai aktivitas dengan menggunakan protokol FTP. Salah satunya adalah mengunggah suatu file.
 
-a. Berapakah sequence number (raw) pada packet yang menunjukkan aktivitas tersebut? 
+a. Berapakah sequence number (raw) pada packet yang menunjukkan aktivitas tersebut? `258040667`
+##### Jawaban
+Untuk mendapatkan sequence number (raw) pada packet yang menunjukkan aktivitas tersebut adalah dengan memasukkan filter seperti di bawah ini:
 
-b. Berapakah acknowledge number (raw) pada packet yang menunjukkan aktivitas tersebut? 
+```
+ftp.request.command == "STOR"
+```
+Lalu sistem akan menampilkan _source address_, yaitu 192.168.254.129. Sistem juga akan menampilkan _destination address_, yaitu 10.21.78.111. Kemudian menunjukkan sequence number beserta acknowledge number pada soal poin b.
+<img width="431" alt="image" src="https://github.com/fihrizilhamr/Jarkom-Modul-1-D07-2023/assets/105486369/961463e4-5d39-4061-8e34-f98f8e5bd6f4">
 
-c. Berapakah sequence number (raw) pada packet yang menunjukkan response dari aktivitas tersebut?
 
-d. Berapakah acknowledge number (raw) pada packet yang menunjukkan response dari aktivitas tersebut?
+b. Berapakah acknowledge number (raw) pada packet yang menunjukkan aktivitas tersebut? `1044861039`
+
+c. Berapakah sequence number (raw) pada packet yang menunjukkan response dari aktivitas tersebut? `1044861039`
+##### Jawaban
+Untuk mendapatkan sequence number (raw) pada packet yang menunjukkan response dari aktivitas tersebut adalah dengan memasukkan filter seperti di bawah ini:
+
+```
+ftp.response.arg contains "c75"
+```
+Lalu sistem akan menampilkan _source address_, yaitu 192.168.254.129. Sistem juga akan menampilkan _destination address_, yaitu 10.21.78.111. Kemudian menunjukkan sequence number beserta acknowledge number pada soal poin d.
+<img width="434" alt="image" src="https://github.com/fihrizilhamr/Jarkom-Modul-1-D07-2023/assets/105486369/ca68d467-4235-478c-b020-ff521f3ac6cb">
+
+
+d. Berapakah acknowledge number (raw) pada packet yang menunjukkan response dari aktivitas tersebut? `258040696`
+
+<img width="420" alt="image" src="https://github.com/fihrizilhamr/Jarkom-Modul-1-D07-2023/assets/105486369/fafb2f7a-e2ec-45de-8404-890a052e73ee">
+
 
 
 ### Soal 2
-Sebutkan web server yang digunakan pada portal praktikum Jaringan Komputer!
+Sebutkan web server yang digunakan pada portal praktikum Jaringan Komputer! `gunicorn`
+##### Jawaban
+Untuk mendapatkan web server yang digunakan pada portal praktikum ini adalah dengan memasukkan filter seperti di bawah ini:
+
+```
+http contains "www"
+```
+
+Lalu sistem akan menampilkan 3 _source address_ yang sama, yaitu 10.21.78.111. Sistem juga akan menampilkan 3 _destination address_ yang sama, yaitu 192.168.254.129. Masing-masing address adalah milik VPN ITS. Kemudian sistem akan menunjukkan web server dengan tampilan sebagai berikut.
+
+<img width="565" alt="image" src="https://github.com/fihrizilhamr/Jarkom-Modul-1-D07-2023/assets/105486369/d5600df9-8a74-410b-a5d2-f683492c7634">
+
 
 
 ### Soal 3
