@@ -80,7 +80,7 @@ tcp.dstport == 80 || udp.dstport == 80
 ```
 Setelah itu, kita bisa mendapatkan kueri filter yang sesuai, yaitu ** tcp.dstport == 80 || udp.dstport == 80**
 
-> ![No 8] (https://github.com/fihrizilhamr/Jarkom-Modul-1-D07-2023/assets/116176265/81c9df5d-3b4a-497c-a1a6-c3eedf48071a)
+> ![No 8](https://github.com/fihrizilhamr/Jarkom-Modul-1-D07-2023/assets/116176265/81c9df5d-3b4a-497c-a1a6-c3eedf48071a)
 
 ### Soal 9
 Berikan kueri filter sehingga wireshark hanya mengambil paket yang berasal dari alamat 10.51.40.1 tetapi tidak menuju ke alamat 10.39.55.34!
