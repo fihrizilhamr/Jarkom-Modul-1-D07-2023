@@ -78,12 +78,23 @@ Untuk memanggil paket yang ter_capture_ dan menuju port `80`, kita dapat menggun
 ```
 tcp.dstport == 80 || udp.dstport == 80
 ```
-Setelah itu, kita bisa mendapatkan kueri filter yang sesuai, yaitu **tcp.dstport == 80 || udp.dstport == 80**
+Setelah itu, kita bisa mendapatkan kueri filter yang sesuai, yaitu **tcp.dstport == 80 || udp.dstport == 80**.
 
 > ![No 8](https://github.com/fihrizilhamr/Jarkom-Modul-1-D07-2023/assets/116176265/81c9df5d-3b4a-497c-a1a6-c3eedf48071a)
 
 ### Soal 9
-Berikan kueri filter sehingga wireshark hanya mengambil paket yang berasal dari alamat 10.51.40.1 tetapi tidak menuju ke alamat 10.39.55.34!
+Berikan kueri filter sehingga wireshark hanya mengambil paket yang berasal dari alamat 10.51.40.1 tetapi tidak menuju ke alamat 10.39.55.34! `ip.src == 10.51.40.1 && ip.dst != 10.39.55.34`
+
+###### Jawaban
+Untuk memanggil paket yang ter_capture_ dan berasal dari alamat `10.51.40.1` tetapi tidak menuju ke alamat `10.39.55.34`, kita dapat menggunakan perintah berikut:
+```
+ip.src == 10.51.40.1 && ip.dst != 10.39.55.34
+```
+Setelah itu, kita bisa mendapatkan kueri filter yang sesuai, yaitu **ip.src == 10.51.40.1 && ip.dst != 10.39.55.34**.
+
+> ![No 9]( https://github.com/fihrizilhamr/Jarkom-Modul-1-D07-2023/assets/116176265/664b1c13-3401-46b7-b870-7f304b8e4ecd)
+
+
 
 ### Soal 10
 Sebutkan kredensial yang benar ketika user mencoba login menggunakan Telnet
